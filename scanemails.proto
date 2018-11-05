@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+service ScanEmails{
+    rpc GetScanEmailsData(ScanEmailsQuery) returns (stream ScanEmailsResponse){}
+}
+
+message ScanEmailsQuery{
+    string query=1;
+}
+
+message ScanEmailsResponse{
+    string response=1;
+}
